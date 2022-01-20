@@ -91,7 +91,7 @@ describe('channels > actions', () => {
 
                 // * Verify that no users were invited
                 cy.getFirstPostId().then((id) => {
-                    cy.get(`#postMessageText_${id}`)
+                    cy.get(`#someidthatdefinitelydoesntexist`)
                         .contains('You were added to the channel by @playbooks.')
                         .should('not.contain', 'joined the channel');
                 });
