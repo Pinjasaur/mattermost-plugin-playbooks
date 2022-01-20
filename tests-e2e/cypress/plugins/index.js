@@ -60,21 +60,21 @@ module.exports = (on, config) => {
         return launchOptions;
     });
 
-    // generates timing data for use in .circleci/config.yml,
-    // slightly different to `mocha-junit-reporter` which was used previously.
-    // see `pull/951` for more info
-    on('after:spec', (spec, results) => {
-        const timeInMillis = results.stats.wallClockDuration;
-        const millisPerSec = 1000;
-        const timeInSec = timeInMillis / millisPerSec;
-        const XMLResult = `
-        <testsuite>
-            <testcase name="${spec.name}" file="${spec.relative}" time="${timeInSec}">
-            </testcase>
-        </testsuite>`;
+    // // generates timing data for use in .circleci/config.yml,
+    // // slightly different to `mocha-junit-reporter` which was used previously.
+    // // see `pull/951` for more info
+    // on('after:spec', (spec, results) => {
+    //     const timeInMillis = results.stats.wallClockDuration;
+    //     const millisPerSec = 1000;
+    //     const timeInSec = timeInMillis / millisPerSec;
+    //     const XMLResult = `
+    //     <testsuite>
+    //         <testcase name="${spec.name}" file="${spec.relative}" time="${timeInSec}">
+    //         </testcase>
+    //     </testsuite>`;
 
-        shell.echo(XMLResult).toEnd('temp-results.txt');
-    });
+    //     shell.echo(XMLResult).toEnd('temp-results.txt');
+    // });
 
     installLogsPrinter(on);
 
