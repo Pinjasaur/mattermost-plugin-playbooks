@@ -15,7 +15,7 @@
     "lodash.mapkeys": "^4.6.0",
     "lodash.xor": "^4.5.0",
     "mattermost-redux": "^5.33.1",
-    "mocha-junit-reporter": "Phrynobatrachus/mocha-junit-reporter#master",
+    "mocha-junit-reporter": "Phrynobatrachus/mocha-junit-reporter#2aaa3f796fa93247b07612199c4c1fa96be348a1",
     "mochawesome": "^6.2.2",
     "mochawesome-merge": "^4.2.0",
     "mochawesome-report-generator": "^5.2.0"
