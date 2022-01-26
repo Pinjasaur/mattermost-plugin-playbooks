@@ -7,7 +7,7 @@ import {useIntl} from 'react-intl';
 
 import {Metric, MetricType} from 'src/types/playbook';
 import {DollarSign, PoundSign} from 'src/components/backstage/playbook_edit/styles';
-import {targetToString} from 'src/components/backstage/playbook_edit/metrics/shared';
+import {Button, Rhs, targetToString} from 'src/components/backstage/playbook_edit/metrics/shared';
 
 interface Props {
     metric: Metric;
@@ -60,6 +60,7 @@ const MetricView = ({metric, editClick}: Props) => {
 };
 
 const ViewContainer = styled.div`
+    flex: 1;
     display: flex;
     font-size: 14px;
     line-height: 20px;
@@ -117,27 +118,6 @@ const Title = styled.div`
 
 const Bold = styled.span`
     font-weight: 600;
-`;
-
-const Rhs = styled.div`
-    font-size: 18px;
-    color: rgba(var(--center-channel-color-rgb), 0.56);
-`;
-
-const Button = styled.button`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    padding: 4px 1px;
-    background: none;
-    border-radius: 4px;
-    border: 0;
-
-    :hover {
-        background: rgba(var(--center-channel-color-rgb), 0.08);
-    }
 `;
 
 export default MetricView;

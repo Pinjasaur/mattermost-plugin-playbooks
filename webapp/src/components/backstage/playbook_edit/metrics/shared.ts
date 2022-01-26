@@ -2,6 +2,7 @@
 // See LICENSE.txt for license information.
 
 import {Duration} from 'luxon';
+import styled from 'styled-components';
 
 import {MetricType} from 'src/types/playbook';
 
@@ -41,3 +42,24 @@ export const stringToTarget = (target: string, type: MetricType) => {
         minutes: ddmmss[2],
     }).as('milliseconds');
 };
+
+export const Rhs = styled.div`
+  font-size: 18px;
+  color: rgba(var(--center-channel-color-rgb), 0.56);
+`;
+
+export const Button = styled.button`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 4px 1px;
+    background: none;
+    border-radius: 4px;
+    border: 0;
+
+    :hover {
+        background: rgba(var(--center-channel-color-rgb), 0.08);
+    }
+`;
